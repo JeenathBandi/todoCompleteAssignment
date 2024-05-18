@@ -1,0 +1,28 @@
+GET http://localhost:4001/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+GET http://localhost:4001/todos/1
+###
+
+GET http://localhost:4001/agenda/?date=2021-12-12
+###
+
+POST http://localhost:4001/todos/
+Content-Type: application/json
+
+{
+  "id": 7,
+  "todo": "Finalize event theme",
+  "priority": "HIGH",
+  "status": "IN PROGRESS",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+###
+
+PUT http://localhost:4001/todos/3
+Content-Type: application/json
+
+{
+      "category": "LEARNING"
+    }
